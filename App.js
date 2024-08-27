@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from "react-native";
+import Avatar from "./src/components/Avatar";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const App = () => {
+	return (
+		<SafeAreaView style={styleApp.telaVermelha}>
+			<Avatar cor={"#7B68EE"} />
+			<Avatar cor={"#00FF00"} />
+			<Avatar cor={"#FF1493"} />
+		</SafeAreaView>
+	);
+};
+const styleApp = StyleSheet.create({
+	telaVermelha: {
+		backgroundColor: "#FF0000",
+		flex: 1,
+		justifyContent: "space-between",
+		alignItems: "center",
+	},
 });
+
+export default App;

@@ -1,23 +1,19 @@
-import { StyleSheet } from "react-native";
-import Avatar from "./src/components/Avatar";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "./src/screens/Home";
+import Login from "./src/screens/Login";
 
 const App = () => {
+	const Stack = createNativeStackNavigator();
+
 	return (
-		<SafeAreaView style={styleApp.telaVermelha}>
-			<Avatar cor={"#7B68EE"} />
-			<Avatar cor={"#00FF00"} />
-			<Avatar cor={"#FF1493"} />
-		</SafeAreaView>
+		<NavigationContainer>
+			<Stack.Navigator initialRouteName='Home'>
+				<Stack.Screen name='Home' component={Home} />
+				<Stack.Screen name='Login' component={Login} />
+			</Stack.Navigator>
+		</NavigationContainer>
 	);
 };
-const styleApp = StyleSheet.create({
-	telaVermelha: {
-		backgroundColor: "#FF0000",
-		flex: 1,
-		justifyContent: "space-between",
-		alignItems: "center",
-	},
-});
 
 export default App;

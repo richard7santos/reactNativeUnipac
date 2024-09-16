@@ -18,13 +18,6 @@ const Home = (props) => {
 			<Text style={homeStyle.corTexto}>
 				Bem vindo à página incial de achados e perdidos
 			</Text>
-			<Button
-				title='Ir para Login'
-				color='#0800ff'
-				onPress={() => {
-					props.navigation.navigate("Login");
-				}}
-			/>
 		</View>
 	);
 };

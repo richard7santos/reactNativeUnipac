@@ -16,8 +16,6 @@ const Login = (props) => {
 	return (
 		<View style={homeStyle.fundo}>
 			<Avatar cor={"#1ffc06"} />
-			<Text style={homeStyle.corTexto}>Não tem conta?</Text>
-
 			<Button
 				title='Cadastre-se'
 				color='#0800ff'

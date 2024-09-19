@@ -1,7 +1,7 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import Avatar from "../../components/Avatar";
 
-const Login = (props) => {
+const Register = () => {
 	const homeStyle = StyleSheet.create({
 		fundo: {
 			backgroundColor: "#3306fc",
@@ -16,14 +16,8 @@ const Login = (props) => {
 	return (
 		<View style={homeStyle.fundo}>
 			<Avatar cor={"#1ffc06"} />
-			<Button
-				title='Cadastre-se'
-				color='#0800ff'
-				onPress={() => {
-					props.navigation.navigate("Registrar");
-				}}
-			/>
+			<Text style={homeStyle.corTexto}>Página de Registro</Text>
 		</View>
 	);
 };
-export default Login;
+export default Register;
